@@ -5,7 +5,7 @@ env = Env()
 env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+print(BASE_DIR)
 COMPANY_COORDINATES = [55.751244, 37.618423]
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", [])
@@ -95,6 +95,7 @@ USE_TZ = True
 STATIC_URL = os.getenv('STATIC_URL', '/static/')
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
+print(STATICFILES_DIRS)
 
 MEDIA_ROOT = os.getenv("MEDIA_ROOT", os.path.join(BASE_DIR, 'media'))
 
